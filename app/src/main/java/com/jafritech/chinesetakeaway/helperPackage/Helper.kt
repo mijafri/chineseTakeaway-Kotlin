@@ -55,26 +55,26 @@ class Helper {
         b: Int,
         qty: String,
         c: Int,
-        price: String
+        price: String,
     ): String {
-
         val sl = (a * 1.6).toInt()
         val its = (b * 1.6).toInt()
         val qt = (c * 1.6).toInt()
-        var str = slno
+        val str: StringBuilder = java.lang.StringBuilder()
+        str.append(slno)
         for (i in 0 until sl) {
-            str += " "
+            str.append(" ")
         }
-        str += items
+        str.append(items)
         for (i in 0 until its) {
-            str += " "
+            str.append(" ")
         }
-        str += qty
+        str.append(qty)
         for (i in 0 until qt) {
-            str += " "
+            str.append(" ")
         }
-        str += price
-        return str
+        str.append(price)
+        return str.toString()
     }
 
     // return order list

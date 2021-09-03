@@ -15,4 +15,6 @@ class HelperTest {
         val result = Helper().formatPrice(amount)
         assertThat(result).isEqualTo(expected)
     }
+
+
 }
